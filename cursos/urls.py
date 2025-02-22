@@ -2,7 +2,20 @@
 
 from django.contrib import admin
 from django.urls import path
-from .views import CursoAPIView, AvaliacaoAPIView, CursosAPIView, AvaliacoesAPIView
+
+from rest_framework.routers import SimpleRouter
+
+from .views import (
+    CursoAPIView,
+    AvaliacaoAPIView,
+    CursosAPIView,
+    AvaliacoesAPIView,
+    CursoViewSet,
+    AvaliacaoViewSet)
+
+router = SimpleRouter()
+router.register('cursos', CursoViewSet)
+router.register('avaliacoes', AvaliacaoViewSet)
 
 urlpatterns = [
     path('cursos/', CursosAPIView.as_view(), name='cursos'),
