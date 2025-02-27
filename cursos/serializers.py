@@ -8,7 +8,12 @@ class AvaliacaoSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             'email': {'write_only': True}
         }
-        fields = '__all__'
+        fields = ('id', 'curso', 'nome', 'email','comentario', 'avaliacao', 'criacao', 'ativo')
+
+    def validate_avaliacao(self, valor):
+        if valor in range(1, 6):
+            return valor
+        raise serializers.ValidationError('A avaliacao precisa ser um numero entre 1 e 5')
 
 class CursoSerializer(serializers.ModelSerializer):
     #Nested Relationship
@@ -23,6 +28,10 @@ class CursoSerializer(serializers.ModelSerializer):
 
     # # Primary Key Related field
     # avaliacao = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+
+
     class Meta:
         model = Curso
         fields = ('id', 'titulo', 'url', 'criacao', 'atualizacao', 'ativo', 'avaliacao')
+
+
