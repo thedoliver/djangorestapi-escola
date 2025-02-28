@@ -7,6 +7,7 @@
     <file url="file://$PROJECT_DIR$/cursos/wsgi.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/escola/urls.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/manage.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/teste_get.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/teste_requests.py" charset="UTF-8" />
   </component>
 </project>
