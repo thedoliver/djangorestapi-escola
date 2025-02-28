@@ -8,7 +8,7 @@ url_base_avaliacoes = 'http://localhost:8000/api/v2/avaliacoes/'
 
 curso_atualizado = {
     "titulo": "Algoritmos e Lógica de Programação do básico ao avançado",
-    "url": "http://www.geekuniversity.com.br/api1"
+    "url": "http://www.udemy.com.br/api1"
 }
 
 # buscando o curso com ID 11
